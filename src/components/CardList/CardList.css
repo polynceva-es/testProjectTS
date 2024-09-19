@@ -1,0 +1,28 @@
+.cardList {
+    display: grid;
+    /* Три колонки */
+    grid-template-columns: auto auto auto;
+    /* Два ряда */
+    grid-template-rows: auto auto;
+    /* Автоматическое размещение в ряд */
+    grid-auto-flow: row;
+    /* Отступы между ячейками */
+    gap: 20px;
+}
+
+.cardList__item {
+    padding: 20px;
+    border: 2px solid black;
+}
+
+.cardList__item img {
+    border-radius: 50%;
+}
+
+.cardList__item button {
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    padding: 0;
+}
+
