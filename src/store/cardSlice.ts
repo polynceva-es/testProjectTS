@@ -2,14 +2,19 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 // import type { PayloadAction } from "@reduxjs/toolkit";
 // import { RootState } from "./store";
 
-export type CardType = {
+interface CardTypeAPI {
     id: string,
     email: string,
     first_name: string,
     last_name: string,
     avatar: string,
-    isLiked: boolean
 }
+export interface CardType extends CardTypeAPI{
+    isLiked: boolean,
+    isDelete: boolean
+ }
+
+
 // Define a type for the slice state
 interface CardsList {
     cards: CardType[],
@@ -27,7 +32,7 @@ export const getCards = createAsyncThunk(
     'cards/getCards',
     async (__, { rejectWithValue }) => {
         try {
-            const response = await fetch('https://reqres.in/api/users?page=1', {
+            const response = await fetch('https://reqres.in/api/users?page=2', {
                 method: 'GET',
                 headers: { 'Content-Type': 'application/json' },
             });
@@ -45,14 +50,13 @@ export const cardSlise = createSlice({
     name: 'cards',
     initialState,
     reducers: {
-        handleLike: (state) => {
-            // state.cards.cards.isLiked = true;
+        handleLike: (state, action) => {
         }
     },
     extraReducers: (builder) => {
         builder.addCase(getCards.fulfilled, (state, action) => {
             state.isLoading = false;
-            state.error = 'text error';
+            state.error = '';
             state.cards = action.payload;
         })
         builder.addCase(getCards.pending, (state) => {

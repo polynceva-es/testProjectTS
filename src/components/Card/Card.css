@@ -1,0 +1,35 @@
+.card {
+    padding: 20px;
+    border: 2px solid black;
+    border-radius: 5px;
+    backdrop-filter: blur(10px);
+}
+
+.card__avatar {
+    border-radius: 50%;
+    object-fit: cover;
+    width: 100px;
+    height: 100px;
+}
+
+.card button {
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.card__button-like {
+    background-image: url(../../image/like.png);
+}
+
+.card__button-like_liked {
+    background-image: url(../../image/isLiked.png);
+}
+
+.card__button-delete {
+    background-image: url(../../image/delete.png);
+}
