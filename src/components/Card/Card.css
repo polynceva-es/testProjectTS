@@ -5,6 +5,10 @@
     backdrop-filter: blur(10px);
 }
 
+.card_hidden {
+    display: none;
+}
+
 .card__avatar {
     border-radius: 50%;
     object-fit: cover;

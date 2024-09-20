@@ -51,6 +51,14 @@ export const cardSlise = createSlice({
     initialState,
     reducers: {
         handleLike: (state, action) => {
+            const users = state.cards;
+            const user = users.find((item)=> item.id == action.payload)
+            if(user) {user.isLiked = !user.isLiked}
+        },
+        handleDelete: (state, action) => {
+            const users = state.cards;
+            const user = users.find((item)=> item.id == action.payload)
+            if(user) {user.isDelete = true}
         }
     },
     extraReducers: (builder) => {
@@ -70,3 +78,4 @@ export const cardSlise = createSlice({
 })
 
 export default cardSlise.reducer
+export const {handleLike, handleDelete} = cardSlise.actions;
