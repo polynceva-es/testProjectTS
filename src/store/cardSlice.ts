@@ -19,20 +19,24 @@ export interface CardType extends CardTypeAPI{
 interface CardsList {
     cards: CardType[],
     isLoading: boolean,
-    error: string
+    error: string,
+    page: number,
+    thatsAll: boolean
 }
 // Define the initial state using that type
 const initialState: CardsList = {
     cards: [],
     isLoading: false,
-    error: ''
+    error: '',
+    page: 1,
+    thatsAll: false
 }
 
 export const getCards = createAsyncThunk(
     'cards/getCards',
-    async (__, { rejectWithValue }) => {
+    async (page: number, { rejectWithValue }) => {
         try {
-            const response = await fetch('https://reqres.in/api/users?page=2', {
+            const response = await fetch(`https://reqres.in/api/users?page=${page}`, {
                 method: 'GET',
                 headers: { 'Content-Type': 'application/json' },
             });
@@ -65,7 +69,16 @@ export const cardSlise = createSlice({
         builder.addCase(getCards.fulfilled, (state, action) => {
             state.isLoading = false;
             state.error = '';
-            state.cards = action.payload;
+            // state.cards = state.cards.concat(action.payload);
+            if(action.payload.length !== 0) {
+                action.payload.forEach((elem: CardType) => {
+                    if(!state.cards.find(el => el.id === elem.id)) {
+                      state.cards.push(elem)
+                    }
+                })
+            } else {
+                state.thatsAll = true;
+            }
         })
         builder.addCase(getCards.pending, (state) => {
             state.isLoading = true;
