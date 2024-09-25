@@ -12,6 +12,7 @@ function App() {
   const dispatch = useAppDispatch();
   const [pageNumber, setPageNumber] = useState(1);
 
+  console.log('start');
   useEffect(() => {
     dispatch(getCards(pageNumber));
   }, []);
@@ -22,9 +23,9 @@ function App() {
 
   return (
   <Routes>
-    <Route path="/" element={<MainPage/>} />
-    <Route path="/users" element={<CardList pageNumber={pageNumber} setPageNumber={setPageNumber}/>}/>
-    <Route path="/users/:id" element={<User/>} />
+    <Route path="/testProjectTS/" element={<MainPage/>} />
+    <Route path="/testProjectTS/users" element={<CardList pageNumber={pageNumber} setPageNumber={setPageNumber}/>}/>
+    <Route path="/testProjectTS/users/:id" element={<User/>} />
   </Routes>
 )}
 

@@ -23,7 +23,7 @@ export const Card = ({ card }: { card: CardType }) => {
         src={card.avatar}
         alt="photo"
         className="card__avatar"
-        onClick={() => navigate(`/users/${card.id}`)}
+        onClick={() => navigate(`/testProjectTS/users/${card.id}`)}
       />
       <h1>{card.first_name}</h1>
       <p>{card.last_name}</p>

@@ -14,7 +14,7 @@ export const User = () => {
     return (
       <section>
         <Card card={user} />
-        <button  onClick={()=> navigate('/users')}>Go back</button>
+        <button  onClick={()=> navigate('/testProjectTS/users')}>Go back</button>
       </section>
     );
   } else {return <div>Oops...!</div>}

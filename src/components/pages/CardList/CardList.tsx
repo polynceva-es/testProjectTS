@@ -26,7 +26,7 @@ export const CardList = (props: Props) => {
   }
   return (
     <section className="cardList__section">
-      <button onClick={()=> navigate('/')}>Go to main page</button>
+      <button onClick={()=> navigate('/testProjectTS/')}>Go to main page</button>
     {/* add show liked card */}
     <ul className="cardList">
       {cardsList.map((card) => (
