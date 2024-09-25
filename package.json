@@ -1,5 +1,6 @@
 {
   "name": "testprojectts",
+  "homepage": "git@github.com:polynceva-es/testProjectTS.git",
   "private": true,
   "version": "0.0.0",
   "type": "module",
