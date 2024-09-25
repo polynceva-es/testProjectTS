@@ -3,7 +3,8 @@
     border: 2px solid black;
     border-radius: 5px;
     backdrop-filter: blur(10px);
-    width: 250px;
+    /* width: 250px; */
+    position: relative;
 }
 
 .card_hidden {
@@ -15,6 +16,15 @@
     object-fit: cover;
     width: 100px;
     height: 100px;
+    cursor: pointer;
+}
+
+.card__btn-conteiner {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    gap: 5px;
 }
 
 .card button {
@@ -25,6 +35,8 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-color: rgba(0, 0, 0, 0);
+    border: none;
+    cursor: pointer;
 }
 
 .card__button-like {

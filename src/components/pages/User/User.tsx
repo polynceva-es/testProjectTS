@@ -1,7 +1,7 @@
-import { Card } from "../Card/Card";
+import { Card } from "../../Card/Card";
 import { useNavigate } from "react-router-dom";
 import { useParams } from "react-router-dom";
-import { useAppSelector } from "../../store/store";
+import { useAppSelector } from "../../../store/store";
 
 export const User = () => {
   const userId = useParams();

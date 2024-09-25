@@ -1,7 +1,8 @@
 import "./CardList.css";
-import { useAppSelector, useAppDispatch } from "../../store/store";
-import { getCards } from "../../store/cardSlice";
-import { Card } from "../Card/Card";
+import { useAppSelector, useAppDispatch } from "../../../store/store";
+import { getCards } from "../../../store/cardSlice";
+import { Card } from "../../Card/Card";
+import { useNavigate } from "react-router-dom";
 
 
 type Props = {
@@ -15,6 +16,7 @@ export const CardList = (props: Props) => {
   const cardsList = useAppSelector((state) => state.cards.cards);
   const thatsAll = useAppSelector((state) => state.cards.thatsAll);
   const dispatch = useAppDispatch();
+  const navigate = useNavigate();
 
 
 
@@ -24,6 +26,7 @@ export const CardList = (props: Props) => {
   }
   return (
     <section className="cardList__section">
+      <button onClick={()=> navigate('/')}>Go to main page</button>
     {/* add show liked card */}
     <ul className="cardList">
       {cardsList.map((card) => (

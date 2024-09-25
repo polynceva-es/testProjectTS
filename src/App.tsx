@@ -4,8 +4,9 @@ import {Routes, Route} from "react-router-dom";
 import { useAppDispatch } from "./store/store";
 import { getCards } from "./store/cardSlice";
 import { useEffect } from "react";
-import { CardList } from "./components/CardList/CardList";
-import { User } from "./components/User/User";
+import { MainPage } from "./components/pages/MainPage/MainPage";
+import { CardList } from "./components/pages/CardList/CardList";
+import { User } from "./components/pages/User/User";
 
 function App() {
   const dispatch = useAppDispatch();
@@ -21,6 +22,7 @@ function App() {
 
   return (
   <Routes>
+    <Route path="/" element={<MainPage/>} />
     <Route path="/users" element={<CardList pageNumber={pageNumber} setPageNumber={setPageNumber}/>}/>
     <Route path="/users/:id" element={<User/>} />
   </Routes>

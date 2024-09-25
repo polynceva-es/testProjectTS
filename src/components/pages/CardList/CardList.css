@@ -1,9 +1,11 @@
 .cardList {
     display: grid;
+    grid-auto-flow: dense;
     /* Три колонки */
-    grid-template-columns: repeat(3, 1fr);
+    /* grid-template-columns: repeat(3, 1fr); */
+    grid-template-columns: repeat(3, minmax(250px, 1fr));
     /* Два ряда */
-    grid-template-rows: auto auto;
+    /* grid-template-rows: auto auto; */
     /* Автоматическое размещение в ряд */
     grid-auto-flow: row;
     /* Отступы между ячейками */
