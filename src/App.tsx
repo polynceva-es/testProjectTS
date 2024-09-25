@@ -12,7 +12,6 @@ function App() {
   const dispatch = useAppDispatch();
   const [pageNumber, setPageNumber] = useState(1);
 
-  console.log('start');
   useEffect(() => {
     dispatch(getCards(pageNumber));
   }, []);
