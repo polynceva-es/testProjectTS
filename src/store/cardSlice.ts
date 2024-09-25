@@ -83,7 +83,7 @@ export const cardSlise = createSlice({
         builder.addCase(getCards.pending, (state) => {
             state.isLoading = true;
         })
-        builder.addCase(getCards.rejected, (state, action) => {
+        builder.addCase(getCards.rejected, (state) => {
             state.isLoading = false;
             // state.error = action.payload;
         })
