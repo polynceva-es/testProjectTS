@@ -5,7 +5,9 @@ export const MainPage = () => {
   const navigate = useNavigate();
   return (
     <div>
-      <button onClick={() => navigate("/testProjectTS/users")}>Go to users</button>
+      <button onClick={() => navigate("/testProjectTS/users")}>
+        Go to users
+      </button>
     </div>
   );
 };

@@ -330,3 +330,111 @@
 //   }, 0)
 //   return result
 //   };
+
+
+  // Задача 4. Написать метод, который в консоль выводит таблицу умножения.
+  // На вход метод получает число, до которого выводит таблицу умножения.
+  // В консоли должна появиться таблица.
+
+  // const consoleTab = (number: number): void => {
+  //   if(number < 1 ) {return}
+  //   let str1: string = ' ';
+  //   for (let i: number = 1; i <= number; i++) {
+  //     str1 = str1.concat(`\t${i.toString()}`)
+  //   }
+  //   console.log(str1)
+  //   //i - column's number
+  //   for (let i: number = 1; i <= number; i++) {
+  //     let str: string = i.toString();
+  //     //j - string's number
+  //     for (let j: number = 1; j <= number; j++) {
+  //       str = str.concat(`\t${(i*j).toString()}`)
+  //     }
+  //     console.log(str)
+  //   }
+  // };
+  // consoleTab(-3);
+
+    // Задача 1. 
+  // Разработайте функцию, которая принимает целое число в качестве аргумента 
+  // и возвращает строку, содержащую это число и слово "компьютер" в нужном склонении по падежам в зависимости от числа. 
+  // Например, при вводе числа 25 функция должна возвращать "25 компьютеров", для числа 41 — "41 компьютер", а для числа 1048 — "1048 компьютеров".
+  
+  // Каким будет слово для одной единицы?
+  // Каким будет слово для двух единиц?
+  // Каким будет слово для пяти единиц?
+
+// const returnString = (number: number): string => {
+// const words: string[] = ['компьютер', 'компьютера', 'компьютеров'];
+// const value: number = Math.abs(number) % 100;
+// const num: number = value % 10;
+//   if (value > 10 && value < 20) return number + ' ' + words[2];
+//   if (num > 1 && num < 5) return number + ' ' + words[1];
+//   if (num === 1) return number + ' ' + words[0];
+// return number + ' ' + words[2];
+// }
+
+// Задача 2.
+  // Написать функцию/метод, которая на вход получает массив положительных целых чисел произвольной длины.
+  // Например [42, 12, 18].
+  // На выходе возвращает массив чисел, которые являются общими делителями для всех указанных числе.
+  // В примере это будет [2, 3, 6].
+  // 1. рассмотрим два числа: 12 и 15.
+  // 2. Выпишем все делители этих чисел.
+  //   12 – делители 1, 2, 3, 4, 6, 12.
+  //   15 – делители 1, 3, 5, 15.
+  // 3. Найдём общие делители этих чисел – это числа 1 и 3.
+
+  // const returnDenominators = (array: number[]): number[] => {
+  //   const denominators: number[] = [];
+  //   const uniqueDenominators: number[] = [];
+  //   array.map((number) => {
+  //     for (let i = 2; i <= number; i++) {
+  //       if (number > 0 && number % i === 0) {
+  //         denominators.push(i);
+  //       }
+  //     }
+  //   });
+  //   for (let i = 0; i < denominators.length; i++) {
+  //     for (let j = i + 1; j < denominators.length; j++) {
+  //       if (denominators[i] === denominators[j] && !uniqueDenominators.includes(denominators[i])) {
+  //         uniqueDenominators.push(denominators[i]);
+  //       }
+  //     }
+  //   }
+  //   return uniqueDenominators;
+  // };
+
+    // Задача 3.
+  // Написать функцию/метод, которая возвращает массив простых чисел в диапазоне (2 числа - минимальное и максимальное) заданных чисел.
+  // Например, на вход переданы 2 числа: от 11 до 20  (диапазон считается включая граничные значения).
+  // Решето Эратосфена
+  // Этот метод позволяет найти все простые числа меньше заданного числа n.
+  // Суть метода заключается в следующем. Возьмем набор чисел от 2 до n.
+  // Вычеркнем из набора (отсеим) все числа делящиеся на 2, кроме 2.
+  // Перейдем к следующему «не отсеянному» числу — 3, снова вычеркиваем все что делится на 3.
+  // Переходим к следующему оставшемуся числу — 5 и так далее до тех пор пока мы не дойдем до n.
+  // После выполнения вышеописанных действий, в изначальном списке останутся только простые числа.
+
+  // const returnArray = (num1: number, num2: number): number[] => {
+  //   let numbers: number[] = [];
+  //   let temp: number[] = [];
+  //   const simple: number[] = [];
+  //   for (let i = 2; i <= num2; i++) {
+  //     numbers.push(i);
+  //   }
+
+  //   while(numbers.length > 0) {
+  //     simple.push(numbers[0]);
+  //     for (let i = 1; i < numbers.length; i++) {
+  //       if (numbers[i] % numbers[0] !== 0) {
+  //         temp.push(numbers[i]);
+  //       }
+  //     }
+  //     numbers = temp;
+  //     temp = [];
+  //   }
+  //   return simple.filter((el)=> {
+  //     return num1<=el && num2>=el
+  //   });
+  // };
