@@ -31,23 +31,11 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  // const dispatch = useAppDispatch();
-  // const [pageNumber, setPageNumber] = useState(1);
-
-  // useEffect(() => {
-  //   dispatch(getCards(pageNumber));
-  // }, []);
-
-  // useEffect(() => {
-  //   dispatch(getCards(pageNumber));
-  // }, [pageNumber, dispatch]);
   return (
 
     <html lang="en">
       <StoreProvider>
-      <body 
-      // className={`${geistSans.variable} ${geistMono.variable}`}
-      >
+      <body>
         {children}
       </body>
       </StoreProvider>

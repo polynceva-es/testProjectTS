@@ -7,7 +7,7 @@
     position: relative;
 }
 
-.card_hidden {
+.hidden {
     display: none;
 }
 
@@ -19,7 +19,7 @@
     cursor: pointer;
 }
 
-.card__btn-conteiner {
+.conteiner {
     position: absolute;
     top: 10px;
     right: 10px;
@@ -27,7 +27,7 @@
     gap: 5px;
 }
 
-.card button {
+.button {
     width: 25px;
     height: 25px;
     padding: 0;
@@ -39,14 +39,14 @@
     cursor: pointer;
 }
 
-.card__button-like {
+.like {
     background-image: url(../../../public/images/like.png);
 }
 
-.card__button-like_liked {
+.liked {
     background-image: url(../../../public/images/isLiked.png);
 }
 
-.card__button-delete {
+.delete {
     background-image: url(../../../public/images/delete.png);
 }
