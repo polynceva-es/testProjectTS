@@ -9,7 +9,7 @@ export default function User() {
   const userId = useParams().user;
   const cardList = useAppSelector((state) => state.cards.cards);
   const user = cardList.find((item) => {
-      return item.id === Number(userId);
+      return item.id == userId;
   });
 
     return (
