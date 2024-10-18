@@ -1,7 +1,7 @@
 "use client"
 import styles from "./card.module.css";
 import Link from "next/link";
-import Image from "next/image";
+// import Image from "next/image";
 // import { useAppSelector, useAppDispatch } from "../../../lib/hooks";
 import { CardType } from "../../../lib/features/card/cardSlice";
 // import { handleLike, handleDelete } from "../../../lib/features/card/cardSlice";
