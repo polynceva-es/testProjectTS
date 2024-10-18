@@ -1,5 +1,5 @@
 'use client'
-import type { Metadata } from "next";
+// import type { Metadata } from "next";
 import StoreProvider from "./StoreProvider"
 // import { useState, useEffect } from "react";
 // import { useAppDispatch } from "@/lib/hooks";

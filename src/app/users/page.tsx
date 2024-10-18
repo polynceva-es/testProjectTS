@@ -29,10 +29,10 @@ export default function Users(props: Props) {
       <h1>This is Many Users</h1>
       <p>Users</p>
       <Link href={"/"}>Go Home page</Link>
-      <section className="cardList__section">
+      <section className={styles.section}>
 
     {/* add show liked card */}
-    <ul className="cardList">
+    <ul className={styles.cardList}>
       {cardList.map((card) => (
         <li key={card.id}>
           <Card card={card}/>
