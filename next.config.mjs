@@ -1,13 +1,4 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-    // basePath: "/testProjectTS",
-    output: 'export', // Outputs a Single-Page Application (SPA).
-    distDir: './dist', // Changes the build output directory to `./dist/`.
-    // basePath: process.env.NEXT_PUBLIC_BASE_PATH, // Sets the base path to `/some-base-path`.
-  }
-   
-  export default nextConfig
+const nextConfig = {};
 
-
-  
-  // "homepage": "https://polynceva-es.github.io/testProjectTS/",
+export default nextConfig;

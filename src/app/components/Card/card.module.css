@@ -11,7 +11,7 @@
     display: none;
 }
 
-.card__avatar {
+.avatar {
     border-radius: 50%;
     object-fit: cover;
     width: 100px;
@@ -40,13 +40,13 @@
 }
 
 .card__button-like {
-    background-image: url(../../app/image/like.png);
+    background-image: url(../../../public/images/like.png);
 }
 
 .card__button-like_liked {
-    background-image: url(../../app/image/isLiked.png);
+    background-image: url(../../../public/images/isLiked.png);
 }
 
 .card__button-delete {
-    background-image: url(../../app/image/delete.png);
+    background-image: url(../../../public/images/delete.png);
 }

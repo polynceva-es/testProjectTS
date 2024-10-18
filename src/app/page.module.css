@@ -1,0 +1,16 @@
+.imageDeckstop {
+  display: block;
+}
+
+.imageMobile {
+  display: none;
+}
+
+@media (max-width: 680px) {
+  .imageDeckstop {
+    display: none;
+  }
+  .imageMobile {
+    display: block;
+  }
+}
